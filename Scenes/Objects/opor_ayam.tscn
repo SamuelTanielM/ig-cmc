@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci3gklge8630d"]
+
+[ext_resource type="ArrayMesh" uid="uid://84xrphffwe6t" path="res://Assets/Food/opor_ayam.tres" id="2_5155l"]
+[ext_resource type="PackedScene" uid="uid://bjdfo5pq52mqt" path="res://Assets/PlateCircle.tscn" id="2_p8dfo"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5155l"]
+points = PackedVector3Array(0.374843, 0.46963, 0.980848, -0.461905, -0.0725382, -1.27929, -0.421745, -0.24145, -1.24213, -1.14575, -0.0307581, 0.744394, 0.837093, -0.490948, 0.608722, 1.0559, 0.307247, -0.736955, -0.872564, 0.468448, -0.600507, -0.99516, -0.486516, -0.143044, 0.837855, -0.491387, -0.605358, -0.419015, -0.323826, 1.1962, 1.14575, -0.0307581, 0.744394, -0.787188, 0.467049, 0.685556, 0.375506, 0.470477, -0.978913, -1.3602, 0.0117004, -0.104004, 0.462114, -0.0725308, -1.27914, 1.04367, 0.470619, 0.0644102, 1.35362, -0.0729707, -0.0613114, 0.42681, -0.073591, 1.30437, -0.42497, 0.309204, 1.21318, -0.837093, -0.490948, 0.608722, -1.09502, -0.0727132, -0.819237, -0.333571, -0.489053, -0.977865, -0.425917, 0.309914, -1.21221, 1.05719, -0.242071, -0.78028, -1.2747, 0.309152, -0.0616039, 1.05494, 0.306959, 0.740203, 0.33274, -0.488233, 0.979856, 0.419546, -0.324422, -1.1948, 1.25598, -0.323559, 0.0645887, -1.25597, -0.323558, 0.0645886, -1.00406, -0.323367, -0.77201, 1.27354, 0.308862, 0.0654664)
+
+[node name="OOporAyam" type="Node3D"]
+transform = Transform3D(1.00136, 0, 0, 0, 0.120641, 0, 0, 0, 1.00136, 0, 0, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.24919, -0.015795)
+mass = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("ConvexPolygonShape3D_5155l")
+
+[node name="PlateCircle" parent="RigidBody3D" instance=ExtResource("2_p8dfo")]
+transform = Transform3D(1, 0, 0, 0, 72.8032, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SoftBody3D" type="SoftBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 8.36408, 0, 0, 0, 1, 0, 22.852, 0)
+mesh = ExtResource("2_5155l")
+total_mass = 1.01
+linear_stiffness = 0.1
+pressure_coefficient = 30.0

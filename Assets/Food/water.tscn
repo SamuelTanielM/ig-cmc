@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwjukdbmrmnry"]
+
+[ext_resource type="PackedScene" uid="uid://dhgdt2i63bf4y" path="res://Assets/Food/Water.fbx" id="1_nirca"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ox00p"]
+size = Vector3(1, 1.92844, 1)
+
+[node name="Water" instance=ExtResource("1_nirca")]
+
+[node name="WATER" parent="." index="0"]
+transform = Transform3D(2.31265, 0, 0, 0, 3.93151, 0, 0, 0, 2.31265, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WATER" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WATER/StaticBody3D" index="0"]
+transform = Transform3D(1.90801, 0, 0, 0, 1.1661, 0, 0, 0, 1.90801, 0, 0.183424, 0)
+shape = SubResource("BoxShape3D_ox00p")

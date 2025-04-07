@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0e5nrek60pw1"]
+
+[ext_resource type="PackedScene" uid="uid://c5dne5jh2vhn" path="res://Scenes/UI/GUIDialogue.tscn" id="1_o5qjv"]
+[ext_resource type="Script" uid="uid://bqf38w4h1xi5" path="res://Scripts/UI/dialogue.gd" id="1_q377h"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q377h"]
+viewport_path = NodePath("viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eww3c"]
+resource_local_to_scene = true
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_q377h")
+
+[sub_resource type="QuadMesh" id="QuadMesh_rwqdx"]
+size = Vector2(1.795, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o5qjv"]
+size = Vector3(1, 0.554443, 0.015625)
+
+[node name="Dialogue" type="Node3D"]
+script = ExtResource("1_q377h")
+
+[node name="display" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_eww3c")
+mesh = SubResource("QuadMesh_rwqdx")
+
+[node name="area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="area"]
+transform = Transform3D(1.77422, 0, 0, 0, 1.77422, 0, 0, 0, 1.77422, 0, 0, 0)
+shape = SubResource("BoxShape3D_o5qjv")
+
+[node name="viewport" type="SubViewport" parent="."]
+size = Vector2i(1152, 648)
+
+[node name="GUIDialogue" parent="viewport" instance=ExtResource("1_o5qjv")]

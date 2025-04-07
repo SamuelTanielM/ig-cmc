@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhdkvrmmv5gn1"]
+
+[ext_resource type="PackedScene" uid="uid://d0e5nrek60pw1" path="res://Scenes/UI/Dialogue.tscn" id="2_0el0d"]
+[ext_resource type="Script" uid="uid://yhj2vw3xe4bm" path="res://Scripts/Player.gd" id="4_bhhdu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_drsii"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5w2h"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+
+[sub_resource type="QuadMesh" id="QuadMesh_xgqxu"]
+material = SubResource("StandardMaterial3D_e5w2h")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g26l8"]
+size = Vector3(1, 1, 0.01)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rpqav"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("4_bhhdu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00336695, 0.00903606, 0.00141168)
+shape = SubResource("CapsuleShape3D_drsii")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59, 0)
+current = true
+
+[node name="Slicer" type="Node3D" parent="Camera3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.443504, -0.237657, -2.03263)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/Slicer"]
+mesh = SubResource("QuadMesh_xgqxu")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="Camera3D/Slicer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/Slicer/Area3D"]
+shape = SubResource("BoxShape3D_g26l8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_rpqav")
+
+[node name="Dialogue" parent="." instance=ExtResource("2_0el0d")]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 1.41904, 0.28694, -1.58055)
+visible = false
