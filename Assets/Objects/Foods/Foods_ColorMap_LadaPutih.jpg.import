@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cd4v6mwc7hu8x"
+path.s3tc="res://.godot/imported/Foods_ColorMap_LadaPutih.jpg-e2aebe56fb02cb9434ea8af7cb06a518.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "65b03e0d56abd76fd8fa498c027d19c0"
+}
+
+[deps]
+
+source_file="res://Assets/Objects/Foods/Foods_ColorMap_LadaPutih.jpg"
+dest_files=["res://.godot/imported/Foods_ColorMap_LadaPutih.jpg-e2aebe56fb02cb9434ea8af7cb06a518.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

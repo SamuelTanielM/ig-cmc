@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlsiesoxg2u2x"]
+
+[ext_resource type="Script" uid="uid://d1dxvm4r8pe26" path="res://Scripts/Objects/waterball.gd" id="1_tru16"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mteb"]
+shading_mode = 0
+
+[sub_resource type="SphereMesh" id="SphereMesh_tru16"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_6mteb")
+radius = 0.06
+height = 0.105
+radial_segments = 5
+rings = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tru16"]
+shading_mode = 0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cqgy8"]
+radius = 0.1
+
+[node name="SaltDrop" type="RigidBody3D"]
+collision_layer = 2
+script = ExtResource("1_tru16")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_tru16")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_tru16")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_cqgy8")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://s3sl4s5234xd"]
+
+[ext_resource type="Script" uid="uid://d1dxvm4r8pe26" path="res://Scripts/Objects/waterball.gd" id="1_yxfeu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mteb"]
+shading_mode = 0
+
+[sub_resource type="SphereMesh" id="SphereMesh_6mteb"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_6mteb")
+radius = 0.175
+height = 0.365
+radial_segments = 5
+rings = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxfeu"]
+shading_mode = 0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6mteb"]
+radius = 0.1
+
+[node name="MilkDrop" type="RigidBody3D"]
+collision_layer = 2
+script = ExtResource("1_yxfeu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_6mteb")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_yxfeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_6mteb")

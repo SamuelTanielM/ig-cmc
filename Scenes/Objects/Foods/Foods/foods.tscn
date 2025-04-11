@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dacqq78f3m3te"]
+
+[ext_resource type="PackedScene" uid="uid://sjrfq1iqwn54" path="res://Assets/Objects/Foods/Foods.glb" id="1_16v7h"]
+
+[node name="Foods" instance=ExtResource("1_16v7h")]

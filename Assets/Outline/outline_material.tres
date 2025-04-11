@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c02srautud5fv"]
+
+[ext_resource type="Material" uid="uid://vpbaeudso24r" path="res://Assets/Outline/outline_standard_material.tres" id="1_p1ph3"]
+[ext_resource type="Shader" uid="uid://beniccpqirolc" path="res://Assets/Outline/perfect_outline.tres" id="1_pn5tc"]
+
+[resource]
+render_priority = -2
+next_pass = ExtResource("1_p1ph3")
+shader = ExtResource("1_pn5tc")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 4.0
+shader_parameter/wiggle_strength = 0.005
+shader_parameter/wiggle_speed = 4.0

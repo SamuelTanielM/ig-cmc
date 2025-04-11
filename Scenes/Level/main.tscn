@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2kujb7jwk8k5"]
+
+[ext_resource type="Script" uid="uid://b8n7sc8unpg5v" path="res://Scripts/Level/Lobby/G_dialogue_start.gd" id="1_3l5yx"]
+[ext_resource type="PackedScene" uid="uid://bhdkvrmmv5gn1" path="res://Scenes/Characters/Player.tscn" id="2_0lqk7"]
+[ext_resource type="PackedScene" uid="uid://cyg0pwho00xf0" path="res://Assets/Spawn/stage.tscn" id="3_dmxx3"]
+[ext_resource type="PackedScene" uid="uid://c83id1wgakja2" path="res://Assets/Characters/sun.tscn" id="4_0h1uw"]
+[ext_resource type="PackedScene" uid="uid://d0e5nrek60pw1" path="res://Scenes/UI/Dialogue.tscn" id="5_qnhof"]
+[ext_resource type="PackedScene" uid="uid://c8g5hhj64rbg2" path="res://Scenes/UI/Sky.tscn" id="6_sau07"]
+[ext_resource type="PackedScene" uid="uid://56r8hyb0gqob" path="res://Scenes/Objects/opor_ayam.tscn" id="7_ptjms"]
+[ext_resource type="PackedScene" uid="uid://cdf2eandrty1a" path="res://Scenes/Objects/Foods/Bottles/Oil.tscn" id="8_qe4dj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6bp64"]
+size = Vector3(3.21572, 3.82376, 3.05715)
+
+[node name="Lobby" type="Node3D"]
+script = ExtResource("1_3l5yx")
+
+[node name="Player" parent="." instance=ExtResource("2_0lqk7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 42.6986, -3.50191, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_energy = 1.202
+light_indirect_energy = 2.0
+
+[node name="Stage" parent="." instance=ExtResource("3_dmxx3")]
+transform = Transform3D(1.27506, 0, 0, 0, 1.27506, 0, 0, 0, 1.27506, 8.63521, 0.993011, 0)
+
+[node name="Sun" parent="." instance=ExtResource("4_0h1uw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36.9324, -3.7298, 1.43311)
+
+[node name="Area3D" type="Area3D" parent="Sun"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sun/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.147627, 1.37431, 0.334171)
+shape = SubResource("BoxShape3D_6bp64")
+
+[node name="Dialogue" parent="." instance=ExtResource("5_qnhof")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36.6592, -3.15864, 0)
+
+[node name="Sky" parent="." instance=ExtResource("6_sau07")]
+
+[node name="OOporAyam" parent="." instance=ExtResource("7_ptjms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.9611, -4.43516, -4.72034)
+
+[node name="Oil" parent="." instance=ExtResource("8_qe4dj")]
+transform = Transform3D(1, 0, 0, 0, 0.478738, 0.877958, 0, -0.877958, 0.478738, 39.9826, -2.63488, -3.34451)
+
+[connection signal="body_entered" from="Sun/Area3D" to="." method="_on_body_entered"]

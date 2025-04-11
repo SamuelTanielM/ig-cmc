@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5dne5jh2vhn"]
+[gd_scene load_steps=3 format=3 uid="uid://c5dne5jh2vhn"]
 
 [ext_resource type="PackedScene" uid="uid://crsxx1cdombem" path="res://Scenes/UI/Textbook.tscn" id="1_2njae"]
+[ext_resource type="Texture2D" uid="uid://c68nii7i1lx3w" path="res://Assets/Dialogue/image 96.png" id="2_e157n"]
 
 [node name="GUIDialogue" type="Control"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,40 +14,68 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Image96" type="Sprite2D" parent="."]
+position = Vector2(569, 325.5)
+scale = Vector2(1.01301, 0.868146)
+texture = ExtResource("2_e157n")
+
+[node name="Textbook" parent="." instance=ExtResource("1_2njae")]
+
+[node name="Recipe" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 17.0
+offset_right = -611.0
+offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 200
-theme_override_constants/margin_right = 100
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "🍗 **Simple Stir-Fried Turmeric Chicken with Lime (Ayam Tumis Kunyit Jeruk)**
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 100
+### 🧾 Ingredients (for 2–3 servings):
+- 300 g ayam potong (chicken), cut small (boneless preferred)
+- ½ jeruk nipis (lime), juice only (add at the end)
+- 5 g kunyit bakar (roasted turmeric), finely chopped or thinly sliced
+- 2 cloves bawang putih (garlic), thinly sliced
+- 2 bulbs bawang merah (shallots), thinly sliced
+- 2 daun jeruk (lime leaves), torn or finely sliced
+- ½ tsp garam (salt) – around 2–3 grams
+- ½ tsp chicken powder or MSG (optional)
+- 1–2 tbsp minyak goreng (cooking oil) – around 15–30 ml
+- 2 tbsp air (water) – around 30 ml, just to help it cook through
+"
+autowrap_mode = 2
 
-[node name="BPlay" type="Button" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="Label" parent="MarginContainer/HBoxContainer/BPlay"]
+[node name="Recipe2" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -19.38
-offset_top = -12.0
-offset_right = 19.38
-offset_bottom = 12.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 554.0
+offset_top = 2.0
+offset_right = -57.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Play"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "---
+1. **Prepare the ingredients**  
+   Slice garlic, shallots, turmeric, and tear or slice the lime leaves. Cut the chicken into small pieces.
 
-[node name="Textbook" parent="." instance=ExtResource("1_2njae")]
+2. **Cooking**  
+   - Heat oil in a pan or wok.  
+   - Add garlic, shallots, and turmeric. Stir-fry for about 1 minute until fragrant.  
+   - Add the chicken pieces. Stir-fry until the color changes.  
+   - Add salt, lime leaves, and a splash of water. Stir, then cover and cook for 5–7 minutes, stirring occasionally.  
+   - Add chicken powder or MSG if desired.
+
+3. **Finishing Touch**  
+   Turn off the heat, squeeze lime juice over the chicken, give it a quick stir, and serve warm.
+
+---
+
+🥢 Serve with hot rice and enjoy the fresh citrusy aroma and warm turmeric flavor!"
+autowrap_mode = 2

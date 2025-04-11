@@ -1,0 +1,42 @@
+[signal arg="freeze"]
+if {Lobby.first} == false:
+	jump Lobby_Start/Start
+else:
+	jump Lobby_Start/Back
+label Start
+C_Sun_Moon: Sampurasun, Welcome to Daharti
+- What.. Who are you? Why am i here?
+	jump Lobby_Start/Continue
+- (Run)
+	C_Sun_Moon: Oh!
+	set {Lobby.first} = true
+	[signal arg="unfreeze"]
+	[end_timeline]
+label Back
+- Okay.. Who are you? Why am i here?
+label Continue
+C_Mentari: Well.. I am an orange cat, my name is Mentari, and next to me is Rembulan, a blue cat
+C_Mentari: First of all, we're not the one who threw you from the pink sky, that was someone else. You died and now you're in the ressurection process, we don't know what you'll need, but we can help you
+C_Rembulan: We've been doing this forever, don't worry, we don't bite.. or steal your food
+C_Mentari: Talking about foods, that's probably where we should start
+label Shall we get started
+C_Mentari: So, shall we get started?
+- Can you tell me more about you..
+	C_Mentari: We are both spirits.. there are others like us, doing whatever we want
+	C_Rembulan: We don't exactly know our origins, but we stay here in the spiritual realm to help people like you of what to do next
+	jump Shall we get started
+- What happened to me?
+	C_Mentari: You were ressurected from dead! Possibly by a higher being, this is part of the proccess. But.. How you die.. well we don't knowm, but some people find the answer after some time here
+	C_Rembulan: This place might not be perfect, but it has been successful. Take it easy, this will be a good experience and might just be a day
+	C_Rembulan: Then you can choose whatever it is you want to do, to pass over, to continue your life, to be here, anything!
+	jump Shall we get started
+- I'm ready
+	C_Mentari: Well then, follow us
+[signal arg="start"]
+[wait time="1.0"]
+C_Rembulan: Well, this is the place where you'll try your best to help those on earth
+C_Rembulan: To help them, you'll have to create a certain type of food, a food that resonates with their soul.. because that's what you were doing back on earth..
+C_Playe: I was a chef?
+C_Mentari: We don't exactly know, but knowing there are foods and a kitchen, perhaps you were a chef. Anyway, we will guide you on what to do here
+[signal arg="level1"]
+[end_timeline]

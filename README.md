@@ -1,78 +1,62 @@
-<p align="center">
-  <img width="1280" alt="cover" src="https://user-images.githubusercontent.com/2206700/189457799-6327bab0-b085-4421-8640-6a18e395d17d.png">
-</p>
+# 🍽️ Chef Must Cook
 
-<h1 align="center">Dialogic 2</h1>
+## 🌌 Lore
 
-<p align="center">
-  Create <b>Dialogs</b>, <b>Visual Novels</b>, <b>RPGs</b>, and <b>manage Characters</b> with Godot to create your Game!
-</p>
+A boy with no name has died.
 
-<p align="center">
-  <a href="https://discord.gg/DjcDgDaTMe" target="_blank" style="text-decoration:none"><img alt="Discord" src="https://img.shields.io/discord/628713677239091231?logo=discord&labelColor=CFC9C8&color=646FA9"></a>
-  <a href="https://godotengine.org/download/" target="_blank" style="text-decoration:none"><img alt="Godot v4.2+" src="https://img.shields.io/badge/Godot-v4.2+-%23478cbf?labelColor=CFC9C8&color=49A9B4" /></a>
-  <a href="https://docs.dialogic.pro/introduction.html" target="_blank" style="text-decoration:none"><img alt="Dialogic 2 Documentation" src="https://img.shields.io/badge/documention-online-green?labelColor=CFC9C8&color=6BCD69"></a>
-  <a href="https://github.com/dialogic-godot/dialogic/actions/workflows/unit_test.yml" target="_blank style="text-decoration:none"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/dialogic-godot/dialogic/unit_test.yml?labelColor=CFC9C8&color=DBDCB8"></a>
-  <a href="https://github.com/dialogic-godot/dialogic/releases"  target="_blank" style="text-decoration:none"><img alt="Latest Dialogic Release" src="https://img.shields.io/github/v/release/dialogic-godot/dialogic?include_prereleases&labelColor=CFC9C8&color=CBA18C"></a>
-</p>
+He awakens in a strange, dreamlike realm — the **Resurrection Realm**. There, two spirits await him: **Mentari** ☀️ and **Rembulan** 🌙. They are cats, yet more than cats — gentle, ancient guides. They tell him that to return to life, he must first help others still living on Earth. His task is simple, yet profound:
 
-## Table of Contents
-- [Version](#version)
-- [Installation](#installation)
-- [Documentation](#documentation)
-- [Testing](#testing)
-- [Credits](#credits)
-- [License](#license)
+**Cook food for those in need.**
 
-## Version
+Each dish he creates becomes a reflection of thought, emotion, memory — a manifestation of will. When crafted with care, these dishes can echo through reality and subtly change the lives of those who are suffering.
 
-Dialogic 2 **requires at least Godot 4.2**.
+As he cooks, memories return.
 
-[If you are looking for the Godot 3.x version (Dialogic 1.x) you can find it here.](https://github.com/dialogic-godot/dialogic-1)
+He remembers his mother. He remembers the kitchen, the warmth of porridge on the stove. He remembers the words they used to say together, whispering it like a promise through hunger and hardship: **"Chef Must Cook."**
 
-## Installation
-Follow the installation instructions on our [Getting Started](https://docs.dialogic.pro/getting-started.html#1-installation--activation) documentation.
+He remembers the man — not his father — the one who used them. Who shouted. Who hit. The day came when the shouting turned into something worse. His mother, still trying to cook, was struck down before his eyes. 
 
-Dialogic comes with an auto-updater so you can install future versions right from within the plugin.
+In panic and rage, he remembered the porridge recipe from TV. He hurled the boiling pot from the stove at the man. And then he ran — his cat in his arms — out into the cold night, injured, shaking, alone.
 
-## Documentation
-You can find the official documentation of Dialogic here: [Dialogic Documentation](https://docs.dialogic.pro/)
+The burning pain in his hand made him collapse beneath a tree. Snow in his lungs. He clung to one thought: **Chef Must Cook.** But he never stood up again.
 
-There is a Class Reference as well: [Class Reference](https://docs.dialogic.pro/class_index.html)
+Until now.
 
+A shimmering silhouette, weeping light — a presence like crystal and compassion — held him gently and brought him here. (Unknown to him, she was **Pink Diamond** 💎.)
 
-## Connect with us!
-If you need help or want to share your Dialogic projects, take a look at the following options:
+Now he stands once more. Whole. Healing. Guided by the spirits of cats and memory. He will cook again. Not just to return — but to change the world he left behind.
 
-- Ask questions, or report bugs on our [Discord](https://discord.gg/DjcDgDaTMe)
-- Report bugs and issues on the [GitHub Issues Page](https://github.com/dialogic-godot/dialogic/issues)
-- Ask questions on [GitHub Discussions](https://github.com/dialogic-godot/dialogic/discussions)
+With each dish, he sees the lives of others begin to shift. Small ripples. New chances. Hope.
 
-## Testing
-Dialogic uses [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing) to ensure specific parts function as expected. These tests run on every git push and pull request. The framework to do these tests is called [gdUnit4](https://github.com/MikeSchulze/gdUnit4) and our tests reside in the [/Tests/Unit](https://github.com/dialogic-godot/dialogic/tree/main/Tests/Unit) path. We recommend installing the `gdUnit4` add-on from the `AssetLib`, with this add-on, you can run tests locally.
+Because no matter what — **Chef Must Cook.**
 
-To get started, take a look at the existing files in the path and read the documentation to [create your first test](https://mikeschulze.github.io/gdUnit4/first_steps/firstTest/).
+---
 
-## Interacting with the Source Code
-All methods and variables in the Dialogic 2 source **code prefixed with an underscore (`_`)** are considered *private*, for instance: `_remove_character()`.
+## 🎮 Controls
 
-While you can use them, they may change in their behavior or change their signature, causing breakage in your code while moving between versions.
-Most private methods are used inside public ones; if you need help, check the documentation.
+- **WASD** – Move  
+- **Double W** – Run  
+- **Shift** – Crouch  
+- **Space** – Jump  
+- **1** – Equip Knife 🔪  
+- **2** – View Recipe 📖  
+- **F** – Interact 👐  
+- **Scroll Up/Down** – Rotate held items 🔄  
 
-**Public methods and variables can be found in our [Class Reference](https://docs.dialogic.pro/class_index.html).**
+---
 
-During the Alpha and Beta version stages, code may change at any Dialogic Release to allow drafting a better design.
-Changelogs will accommodate for these changes and inform you on how to update your code.
+## 🧪 Gameplay
 
+You must recreate or invent dishes described by the spirits. Cooking is your only tool. Watch. Learn. Slice. Stir. Serve. Your food connects to the hearts of others — even from this distant realm.
 
-## Credits
-Made by [Jowan-Spooner](https://github.com/Jowan-Spooner) and [Emilio Coppola](https://github.com/coppolaemilio).
+---
 
-Contributors: [CakeVR](https://github.com/CakeVR), [Exelia](https://github.com/exelia-antonov), [zaknafean](https://github.com/zaknafean), [and more!](https://github.com/dialogic-godot/dialogic/graphs/contributors).
+## 🚧 Under Development
 
-Special thanks: [Arnaud](https://github.com/arnaudvergnet), [AnidemDex](https://github.com/AnidemDex), [ellogwen](https://github.com/ellogwen), [Tim Krief](https://github.com/timkrief), [Toen](https://twitter.com/ToenAndreMC), Òscar, [Francisco Presencia](https://francisco.io/), [M7mdKady14](https://github.com/M7mdKady14).
+This game is still in **heavy development**. The developer didn’t realize how big the vision was, and they're learning along the way 😓. There’s no win condition yet. It's still rough. Just a simulation of a greater dream.
 
-### Thank you to all my [Patreons](https://www.patreon.com/coppolaemilio) and Github sponsors for making this possible!
+But if you feel like it, step into the kitchen. Try to make something beautiful 🌱.
 
-## License
-This project is licensed under the terms of the [MIT license](https://github.com/dialogic-godot/dialogic/blob/main/LICENSE).
+More chapters, foods, polish, multiplayer, and a real ending are planned. Someday.
+
+For now, just remember: **Chef Must Cook.** 🔥

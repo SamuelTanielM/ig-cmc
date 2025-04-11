@@ -1,0 +1,154 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsbqqn7qgqj5x"]
+
+[ext_resource type="Script" uid="uid://dpdgbcd0s8krp" path="res://Scripts/UI/gui.gd" id="1_7gxh6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3yn1"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvhrs"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lu3p5"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7gxh6")
+
+[node name="Crosshair" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 121.0
+grow_vertical = 0
+text = "Movement kayak minecraft
+Q to drop items"
+
+[node name="Inventory" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.5
+offset_top = -75.0
+offset_right = 37.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Item1" type="Panel" parent="Inventory"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_s3yn1")
+
+[node name="ItemName" type="Label" parent="Inventory/Item1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemAmount" type="Label" parent="Inventory/Item1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Item2" type="Panel" parent="Inventory"]
+visible = false
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_rvhrs")
+
+[node name="ItemName" type="Label" parent="Inventory/Item2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemAmount" type="Label" parent="Inventory/Item2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Item3" type="Panel" parent="Inventory"]
+visible = false
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_lu3p5")
+
+[node name="ItemName" type="Label" parent="Inventory/Item3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemAmount" type="Label" parent="Inventory/Item3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 2
+vertical_alignment = 2

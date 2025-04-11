@@ -1,0 +1,10 @@
+[gd_resource type="SphereMesh" load_steps=2 format=3 uid="uid://4cmawapvt2q2"]
+
+[ext_resource type="Material" uid="uid://b2p72s2mam02g" path="res://Assets/Objects/soupbased_material.tres" id="1_kcowi"]
+
+[resource]
+material = ExtResource("1_kcowi")
+radius = 0.29
+height = 0.185
+radial_segments = 10
+rings = 10

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqa1ya47ucb3w"]
+
+[ext_resource type="Script" uid="uid://dgaem2x05w7r6" path="res://Scripts/UI/Soup.gd" id="1_whb8y"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_whb8y"]
+top_radius = 0.0
+bottom_radius = 0.0
+height = 0.001
+radial_segments = 12
+rings = 0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bl65h"]
+height = 0.001
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8sher"]
+height = 0.45
+radius = 1.035
+
+[node name="Soup" type="StaticBody3D"]
+collision_layer = 8
+script = ExtResource("1_whb8y")
+prompt_message = "Soup"
+prompt_input = "E"
+
+[node name="SoupBased" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_whb8y")
+skeleton = NodePath("../../StaticBody3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_bl65h")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0724347, 0)
+shape = SubResource("CylinderShape3D_8sher")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]

@@ -1,0 +1,10 @@
+[signal arg="objective"]
+C_Mentari: FOLLOW THE RECIPE (This is the manifestation of someone's thoughts in a form of a food. That is what you'll cook)
+[signal arg="objective2"]
+C_Rembulan: Replicate them the best that you can, taste it and note your thoughts precisely.
+[signal arg="cooking_station"]
+C_Rembulan: Use the cooking station to recreate it. The more accurate the taste, the better the help, but that's not always the case, sometimes we know how to help them better. Feel free to change the appearance of the food, the content of it is the one that matters
+[signal arg="npc"]
+C_Mentari: Know that your food will resonate the strings of fate, changing its course to help those in need. We will be here to help you. Be careful and good luck, chef!
+[wait time="1.0"]
+[signal arg="startgame"]

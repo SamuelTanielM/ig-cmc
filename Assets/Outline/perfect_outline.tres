@@ -1,0 +1,35 @@
+[gd_resource type="Shader" format=3 uid="uid://beniccpqirolc"]
+
+[resource]
+code = "shader_type spatial;
+render_mode cull_front, unshaded;
+
+uniform vec4 outline_color : source_color;
+uniform float outline_width = 4.0;
+uniform float wiggle_strength = 0.02;
+uniform float wiggle_speed = 4.0;
+
+void vertex() {
+	vec4 clip_position = PROJECTION_MATRIX * (MODELVIEW_MATRIX * vec4(VERTEX, 1.0));
+	vec3 clip_normal = mat3(PROJECTION_MATRIX) * (mat3(MODELVIEW_MATRIX) * NORMAL);
+	
+	// Base outline offset
+	vec2 offset = normalize(clip_normal.xy) / VIEWPORT_SIZE * clip_position.w * outline_width * 2.0;
+	
+	// Add wiggle based on vertex position and time
+	offset += vec2(
+		sin(TIME * wiggle_speed + VERTEX.x * 10.0),
+		cos(TIME * wiggle_speed + VERTEX.y * 10.0)
+	) * wiggle_strength;
+
+	clip_position.xy += offset;
+	POSITION = clip_position;
+}
+
+void fragment() {
+	ALBEDO = outline_color.rgb;
+	if (outline_color.a < 1.0) {
+		ALPHA = outline_color.a;
+	}
+}
+"

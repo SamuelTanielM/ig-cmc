@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw11nicur8lto"]
+
+[ext_resource type="PackedScene" uid="uid://c83id1wgakja2" path="res://Assets/Characters/sun.tscn" id="1_jvpr5"]
+[ext_resource type="Texture2D" uid="uid://bqbe7bv4at2j3" path="res://Assets/Spawn/PaintedSky_Day.hdr" id="2_au4aq"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f2b8r"]
+panorama = ExtResource("2_au4aq")
+energy_multiplier = 2.0
+
+[sub_resource type="Sky" id="Sky_ynf5e"]
+sky_material = SubResource("PanoramaSkyMaterial_f2b8r")
+
+[sub_resource type="Environment" id="Environment_poxcl"]
+background_mode = 2
+sky = SubResource("Sky_ynf5e")
+
+[node name="Try" type="Node3D"]
+
+[node name="Sun" parent="." instance=ExtResource("1_jvpr5")]
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_poxcl")

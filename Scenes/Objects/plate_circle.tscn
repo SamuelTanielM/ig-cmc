@@ -1,5 +1,352 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtjnk2abqcs5k"]
+[gd_scene load_steps=14 format=3 uid="uid://c2w6wp7alpck1"]
 
-[ext_resource type="PackedScene" uid="uid://bjdfo5pq52mqt" path="res://Assets/PlateCircle.tscn" id="1_0g7nh"]
+[ext_resource type="PackedScene" uid="uid://bjdfo5pq52mqt" path="res://Assets/Objects/PlateCircle.tscn" id="1_0g7nh"]
+[ext_resource type="PackedScene" uid="uid://cb0sh381kevsm" path="res://Scenes/Objects/Foods/Foods/Chicken.tscn" id="2_mr5sd"]
+[ext_resource type="PackedScene" uid="uid://cplaunl2x1uf7" path="res://Scenes/Objects/Foods/Foods/Chicken2.tscn" id="3_pit64"]
+[ext_resource type="PackedScene" uid="uid://chqge83appi4i" path="res://Scenes/Objects/Foods/Foods/Chicken1.tscn" id="4_nl6cu"]
+[ext_resource type="PackedScene" uid="uid://bk5aor87cmj8n" path="res://Scenes/Objects/Foods/Foods/BayLeaf.tscn" id="5_rusg4"]
+[ext_resource type="PackedScene" uid="uid://dca1v8gwcdwgf" path="res://Scenes/Objects/Foods/Foods/Candlenut.tscn" id="6_x1bna"]
+[ext_resource type="PackedScene" uid="uid://bb7fckd0rsihh" path="res://Scenes/Objects/Foods/Foods/Corriander.tscn" id="7_uj641"]
+[ext_resource type="PackedScene" uid="uid://cvuaovooj4trr" path="res://Scenes/Objects/Foods/Foods/Lemongrass.tscn" id="8_dp26v"]
+[ext_resource type="PackedScene" uid="uid://b4as7vnujh6dk" path="res://Scenes/Objects/Foods/Foods/Garlic.tscn" id="9_n34dp"]
+[ext_resource type="PackedScene" uid="uid://dptcocoe06hml" path="res://Scenes/Objects/Foods/Foods/Lime.tscn" id="10_2hrd1"]
+[ext_resource type="PackedScene" uid="uid://be0rdv3t1ilgf" path="res://Scenes/Objects/Foods/Foods/Shallots.tscn" id="11_6kdxn"]
+[ext_resource type="PackedScene" uid="uid://ch2575nrx16gm" path="res://Scenes/Objects/Foods/Foods/Turmeric.tscn" id="12_fx73a"]
+[ext_resource type="PackedScene" uid="uid://be30h0mnd1huh" path="res://Scenes/Objects/Foods/Foods/WhitePepper.tscn" id="13_hmcq2"]
 
 [node name="PlateCircle" instance=ExtResource("1_0g7nh")]
+
+[node name="PlateCircle_001" parent="." index="1"]
+visible = true
+
+[node name="RigidBodys" type="Node3D" parent="." index="2"]
+transform = Transform3D(0.66493, 0, -1.16357, 0, 1.34016, 0, 1.16357, 0, 0.66493, -0.431819, 0.393896, 14.0882)
+
+[node name="Chicken" type="Node3D" parent="RigidBodys" index="0"]
+
+[node name="RigidBody3D" parent="RigidBodys/Chicken" index="0" instance=ExtResource("2_mr5sd")]
+
+[node name="Chicken2" type="Node3D" parent="RigidBodys" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18173, 0.0244382, 0.757656)
+
+[node name="RigidBody3D2" parent="RigidBodys/Chicken2" index="0" instance=ExtResource("3_pit64")]
+
+[node name="Chicken3" type="Node3D" parent="RigidBodys" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126929, 0.0315555, 1.51463)
+
+[node name="RigidBody3D3" parent="RigidBodys/Chicken3" index="0" instance=ExtResource("4_nl6cu")]
+
+[node name="BayLeaf" type="Node3D" parent="RigidBodys" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.516751, 0)
+
+[node name="RigidBody3D" parent="RigidBodys/BayLeaf" index="0" instance=ExtResource("5_rusg4")]
+
+[node name="BayLeaf2" type="Node3D" parent="RigidBodys" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0787811, -0.460431, 0.393658)
+
+[node name="RigidBody3D" parent="RigidBodys/BayLeaf2" index="0" instance=ExtResource("5_rusg4")]
+
+[node name="BayLeaf3" type="Node3D" parent="RigidBodys" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158029, -0.457629, 0.219954)
+
+[node name="RigidBody3D" parent="RigidBodys/BayLeaf3" index="0" instance=ExtResource("5_rusg4")]
+
+[node name="Candlenut" type="Node3D" parent="RigidBodys" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.121306, -0.424996, 1.10471)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut2" type="Node3D" parent="RigidBodys" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0266595, -0.411113, 1.2149)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut2" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut3" type="Node3D" parent="RigidBodys" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0608807, -0.315669, 1.08324)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut3" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut4" type="Node3D" parent="RigidBodys" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0620832, -0.336493, 1.26191)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut4" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut5" type="Node3D" parent="RigidBodys" index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0143652, -0.301786, 1.16825)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut5" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Corriander" type="Node3D" parent="RigidBodys" index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.216721, -0.442742, 1.50304)
+
+[node name="RigidBody3D" parent="RigidBodys/Corriander" index="0" instance=ExtResource("7_uj641")]
+
+[node name="Lemongrass" type="Node3D" parent="RigidBodys" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0833931, -0.422937, 2.41642)
+
+[node name="RigidBody3D" parent="RigidBodys/Lemongrass" index="0" instance=ExtResource("8_dp26v")]
+
+[node name="Lemongrass2" type="Node3D" parent="RigidBodys" index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0592728, -0.422937, 2.35128)
+
+[node name="RigidBody3D" parent="RigidBodys/Lemongrass2" index="0" instance=ExtResource("8_dp26v")]
+
+[node name="Lemongrass3" type="Node3D" parent="RigidBodys" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158408, -0.337359, 2.48389)
+
+[node name="RigidBody3D" parent="RigidBodys/Lemongrass3" index="0" instance=ExtResource("8_dp26v")]
+
+[node name="Garlic" type="Node3D" parent="RigidBodys" index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198107, -0.984458, -0.195639)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic2" type="Node3D" parent="RigidBodys" index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.135649, -0.981617, -0.0148354)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic2" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic3" type="Node3D" parent="RigidBodys" index="17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101984, -0.84808, -0.136414)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic3" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic4" type="Node3D" parent="RigidBodys" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0308304, -0.892217, 0.184799)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic4" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic5" type="Node3D" parent="RigidBodys" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0210772, -0.794135, 0.0338888)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic5" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic6" type="Node3D" parent="RigidBodys" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104556, -1.00501, 0.148747)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic6" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Lime" type="Node3D" parent="RigidBodys" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0398836, -0.923229, 0.545618)
+
+[node name="RigidBody3D" parent="RigidBodys/Lime" index="0" instance=ExtResource("10_2hrd1")]
+
+[node name="Lime2" type="Node3D" parent="RigidBodys" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.064137, -0.898478, 0.803002)
+
+[node name="RigidBody3D" parent="RigidBodys/Lime2" index="0" instance=ExtResource("10_2hrd1")]
+
+[node name="Lime3" type="Node3D" parent="RigidBodys" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0332365, -0.77435, 0.711787)
+
+[node name="RigidBody3D" parent="RigidBodys/Lime3" index="0" instance=ExtResource("10_2hrd1")]
+
+[node name="Shallots" type="Node3D" parent="RigidBodys" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101437, -0.917017, 1.1997)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots2" type="Node3D" parent="RigidBodys" index="25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188167, -0.917017, 1.57971)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots2" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots3" type="Node3D" parent="RigidBodys" index="26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1862, -0.784049, 1.3636)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots3" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots4" type="Node3D" parent="RigidBodys" index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0376577, -0.974636, 1.28662)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots4" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots5" type="Node3D" parent="RigidBodys" index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0812426, -0.971672, 1.65462)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots5" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Turmeric" type="Node3D" parent="RigidBodys" index="29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27646, -0.952496, 2.17771)
+
+[node name="RigidBody3D" parent="RigidBodys/Turmeric" index="0" instance=ExtResource("12_fx73a")]
+
+[node name="Turmeric2" type="Node3D" parent="RigidBodys" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135725, -0.782759, 2.60291)
+
+[node name="RigidBody3D" parent="RigidBodys/Turmeric2" index="0" instance=ExtResource("12_fx73a")]
+
+[node name="Turmeric3" type="Node3D" parent="RigidBodys" index="31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0417237, -0.911309, 2.4565)
+
+[node name="RigidBody3D" parent="RigidBodys/Turmeric3" index="0" instance=ExtResource("12_fx73a")]
+
+[node name="WhitePepper" type="Node3D" parent="RigidBodys" index="32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.294389, -0.0568478, 2.29475)
+
+[node name="RigidBody3D" parent="RigidBodys/WhitePepper" index="0" instance=ExtResource("13_hmcq2")]
+
+[node name="Chicken4" type="Node3D" parent="RigidBodys" index="33"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.45332, 0.0997975, 8.43141)
+
+[node name="RigidBody3D" parent="RigidBodys/Chicken4" index="0" instance=ExtResource("2_mr5sd")]
+
+[node name="Chicken5" type="Node3D" parent="RigidBodys" index="34"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.00291, 0.124236, 8.98369)
+
+[node name="RigidBody3D2" parent="RigidBodys/Chicken5" index="0" instance=ExtResource("3_pit64")]
+
+[node name="Chicken6" type="Node3D" parent="RigidBodys" index="35"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.67604, 0.131353, 9.33427)
+
+[node name="RigidBody3D3" parent="RigidBodys/Chicken6" index="0" instance=ExtResource("4_nl6cu")]
+
+[node name="BayLeaf4" type="Node3D" parent="RigidBodys" index="36"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.45332, -0.416953, 8.43141)
+
+[node name="RigidBody3D" parent="RigidBodys/BayLeaf4" index="0" instance=ExtResource("5_rusg4")]
+
+[node name="BayLeaf5" type="Node3D" parent="RigidBodys" index="37"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.74708, -0.360633, 8.70504)
+
+[node name="RigidBody3D" parent="RigidBodys/BayLeaf5" index="0" instance=ExtResource("5_rusg4")]
+
+[node name="BayLeaf6" type="Node3D" parent="RigidBodys" index="38"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.72348, -0.357831, 8.41231)
+
+[node name="RigidBody3D" parent="RigidBodys/BayLeaf6" index="0" instance=ExtResource("5_rusg4")]
+
+[node name="Candlenut6" type="Node3D" parent="RigidBodys" index="39"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.45736, -0.325198, 8.90785)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut6" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut7" type="Node3D" parent="RigidBodys" index="40"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.50149, -0.311316, 9.04624)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut7" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut8" type="Node3D" parent="RigidBodys" index="41"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.40738, -0.215871, 8.94802)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut8" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut9" type="Node3D" parent="RigidBodys" index="42"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.49494, -0.236696, 9.14645)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut9" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Candlenut10" type="Node3D" parent="RigidBodys" index="43"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.44025, -0.201989, 9.05668)
+
+[node name="RigidBody3D" parent="RigidBodys/Candlenut10" index="0" instance=ExtResource("6_x1bna")]
+
+[node name="Corriander2" type="Node3D" parent="RigidBodys" index="44"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.61906, -0.342945, 9.40462)
+
+[node name="RigidBody3D" parent="RigidBodys/Corriander2" index="0" instance=ExtResource("7_uj641")]
+
+[node name="Lemongrass4" type="Node3D" parent="RigidBodys" index="45"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -5.46653, -0.32314, 9.77043)
+
+[node name="RigidBody3D" parent="RigidBodys/Lemongrass4" index="0" instance=ExtResource("8_dp26v")]
+
+[node name="Lemongrass5" type="Node3D" parent="RigidBodys" index="46"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -5.48595, -0.32314, 9.61481)
+
+[node name="RigidBody3D" parent="RigidBodys/Lemongrass5" index="0" instance=ExtResource("8_dp26v")]
+
+[node name="Lemongrass6" type="Node3D" parent="RigidBodys" index="47"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -5.4846, -0.237562, 9.86969)
+
+[node name="RigidBody3D" parent="RigidBodys/Lemongrass6" index="0" instance=ExtResource("8_dp26v")]
+
+[node name="Garlic7" type="Node3D" parent="RigidBodys" index="48"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.39074, -0.88466, 8.16011)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic7" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic8" type="Node3D" parent="RigidBodys" index="49"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.51187, -0.881819, 8.30815)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic8" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic9" type="Node3D" parent="RigidBodys" index="50"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.39071, -0.748282, 8.27301)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic9" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic10" type="Node3D" parent="RigidBodys" index="51"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.62681, -0.792419, 8.50214)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic10" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic11" type="Node3D" parent="RigidBodys" index="52"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.49323, -0.694337, 8.43125)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic11" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Garlic12" type="Node3D" parent="RigidBodys" index="53"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.63481, -0.905214, 8.42046)
+
+[node name="RigidBody3D" parent="RigidBodys/Garlic12" index="0" instance=ExtResource("9_n34dp")]
+
+[node name="Lime4" type="Node3D" parent="RigidBodys" index="54"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -3.93871, -0.823432, 8.68377)
+
+[node name="RigidBody3D" parent="RigidBodys/Lime4" index="0" instance=ExtResource("10_2hrd1")]
+
+[node name="Lime5" type="Node3D" parent="RigidBodys" index="55"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.17053, -0.798681, 8.79819)
+
+[node name="RigidBody3D" parent="RigidBodys/Lime5" index="0" instance=ExtResource("10_2hrd1")]
+
+[node name="Lime6" type="Node3D" parent="RigidBodys" index="56"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.04179, -0.674552, 8.83321)
+
+[node name="RigidBody3D" parent="RigidBodys/Lime6" index="0" instance=ExtResource("10_2hrd1")]
+
+[node name="Shallots6" type="Node3D" parent="RigidBodys" index="57"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.42133, -0.817219, 9.14731)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots6" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots7" type="Node3D" parent="RigidBodys" index="58"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.69931, -0.817219, 9.42055)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots7" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots8" type="Node3D" parent="RigidBodys" index="59"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.51638, -0.684251, 9.30547)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots8" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots9" type="Node3D" parent="RigidBodys" index="60"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.52879, -0.874838, 9.13863)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots9" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Shallots10" type="Node3D" parent="RigidBodys" index="61"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.81918, -0.871875, 9.36884)
+
+[node name="RigidBody3D" parent="RigidBodys/Shallots10" index="0" instance=ExtResource("11_6kdxn")]
+
+[node name="Turmeric4" type="Node3D" parent="RigidBodys" index="62"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -5.16202, -0.852699, 9.80952)
+
+[node name="RigidBody3D" parent="RigidBodys/Turmeric4" index="0" instance=ExtResource("12_fx73a")]
+
+[node name="Turmeric5" type="Node3D" parent="RigidBodys" index="63"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -5.59782, -0.682962, 9.91284)
+
+[node name="RigidBody3D" parent="RigidBodys/Turmeric5" index="0" instance=ExtResource("12_fx73a")]
+
+[node name="Turmeric6" type="Node3D" parent="RigidBodys" index="64"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -5.56631, -0.811511, 9.68496)
+
+[node name="RigidBody3D" parent="RigidBodys/Turmeric6" index="0" instance=ExtResource("12_fx73a")]
+
+[node name="WhitePepper2" type="Node3D" parent="RigidBodys" index="65"]
+transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -5.25224, 0.0429496, 9.8862)
+
+[node name="RigidBody3D" parent="RigidBodys/WhitePepper2" index="0" instance=ExtResource("13_hmcq2")]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba0spfsra7gl6"]
+
+[ext_resource type="Script" uid="uid://curmc48px266u" path="res://Scripts/Level/Level1/level_1.gd" id="1_i7gaw"]
+[ext_resource type="PackedScene" uid="uid://bhdkvrmmv5gn1" path="res://Scenes/Characters/Player.tscn" id="5_n1aum"]
+[ext_resource type="PackedScene" uid="uid://cyg0pwho00xf0" path="res://Assets/Spawn/stage.tscn" id="6_gl8jy"]
+[ext_resource type="PackedScene" uid="uid://c8g5hhj64rbg2" path="res://Scenes/UI/Sky.tscn" id="7_5vtej"]
+[ext_resource type="PackedScene" uid="uid://c83id1wgakja2" path="res://Assets/Characters/sun.tscn" id="7_u04hf"]
+[ext_resource type="PackedScene" uid="uid://d0e5nrek60pw1" path="res://Scenes/UI/Dialogue.tscn" id="8_ugtqp"]
+
+[node name="Lobby" type="Node3D"]
+script = ExtResource("1_i7gaw")
+
+[node name="Player" parent="." instance=ExtResource("5_n1aum")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.367607, -0.351148, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_energy = 0.674
+light_indirect_energy = 2.0
+
+[node name="Stage" parent="." instance=ExtResource("6_gl8jy")]
+transform = Transform3D(1.27506, 0, 0, 0, 1.27506, 0, 0, 0, 1.27506, 8.63521, 0.993011, 0)
+
+[node name="Sun" parent="." instance=ExtResource("7_u04hf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 0, 0)
+
+[node name="GUI" type="Control" parent="."]
+show_behind_parent = true
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="GUI"]
+layout_mode = 0
+offset_right = 219.0
+offset_bottom = 173.667
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+text = "RigidBody slicing example.
+
+Use WASD to move.
+Right mouse to move head.
+Mouse scroll to rotate slicer.
+Left mouse to slice.
+"
+
+[node name="Dialogue" parent="." instance=ExtResource("8_ugtqp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36.6592, -3.15864, 0)
+
+[node name="Sky" parent="." instance=ExtResource("7_5vtej")]

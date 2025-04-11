@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://pvdtqxhsx26p"]
-
-[ext_resource type="PackedScene" uid="uid://581sygkefocd" path="res://Assets/waterball.tscn" id="1_jklbb"]
-
-[node name="waterball" instance=ExtResource("1_jklbb")]

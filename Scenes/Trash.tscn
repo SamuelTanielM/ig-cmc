@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfqda1v7dmmdf"]
+
+[ext_resource type="ArrayMesh" uid="uid://84xrphffwe6t" path="res://Assets/Objects/opor_ayam.tres" id="1_nkago"]
+[ext_resource type="PackedScene" uid="uid://dt7qg8kidqseq" path="res://Scenes/Objects/SliceableObjects.tscn" id="2_1fkk3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_v2s8x"]
+sky_top_color = Color(0.286275, 0.411765, 0.823529, 1)
+sky_horizon_color = Color(0.580392, 0.678431, 0.678431, 1)
+ground_horizon_color = Color(0.584314, 0.67451, 0.686275, 1)
+
+[sub_resource type="Sky" id="Sky_h6djc"]
+sky_material = SubResource("ProceduralSkyMaterial_v2s8x")
+
+[sub_resource type="Environment" id="Environment_0mpj5"]
+background_mode = 2
+sky = SubResource("Sky_h6djc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5w2h"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+
+[sub_resource type="QuadMesh" id="QuadMesh_nkago"]
+material = SubResource("StandardMaterial3D_e5w2h")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1fkk3"]
+size = Vector3(1, 1, 0.01)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0mpj5")
+
+[node name="SoftBody3D" type="SoftBody3D" parent="."]
+transform = Transform3D(1.05732, 0, 0, 0, 1.01565, 0, 0, 0, 1.05732, -3.18834, 5.56365, 4.6113)
+mesh = ExtResource("1_nkago")
+total_mass = 2.01
+linear_stiffness = 0.01
+pressure_coefficient = 0.2
+damping_coefficient = 0.12
+
+[node name="RigidBodys" parent="." instance=ExtResource("2_1fkk3")]
+
+[node name="Slicer" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.443504, -0.237657, -2.03263)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Slicer"]
+mesh = SubResource("QuadMesh_nkago")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="Slicer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Slicer/Area3D"]
+shape = SubResource("BoxShape3D_1fkk3")

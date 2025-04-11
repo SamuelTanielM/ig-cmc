@@ -1,0 +1,64 @@
+[gd_scene load_steps=13 format=3 uid="uid://do7gg4t5dvrhj"]
+
+[ext_resource type="PackedScene" uid="uid://cb0sh381kevsm" path="res://Scenes/Objects/Foods/Foods/Chicken.tscn" id="1_r2bhd"]
+[ext_resource type="PackedScene" uid="uid://cplaunl2x1uf7" path="res://Scenes/Objects/Foods/Foods/Chicken2.tscn" id="2_6itl4"]
+[ext_resource type="PackedScene" uid="uid://chqge83appi4i" path="res://Scenes/Objects/Foods/Foods/Chicken1.tscn" id="3_cbmrg"]
+[ext_resource type="PackedScene" uid="uid://bk5aor87cmj8n" path="res://Scenes/Objects/Foods/Foods/BayLeaf.tscn" id="4_p0qrd"]
+[ext_resource type="PackedScene" uid="uid://dca1v8gwcdwgf" path="res://Scenes/Objects/Foods/Foods/Candlenut.tscn" id="5_2rueq"]
+[ext_resource type="PackedScene" uid="uid://bb7fckd0rsihh" path="res://Scenes/Objects/Foods/Foods/Corriander.tscn" id="6_jjy58"]
+[ext_resource type="PackedScene" uid="uid://cvuaovooj4trr" path="res://Scenes/Objects/Foods/Foods/Lemongrass.tscn" id="7_671uo"]
+[ext_resource type="PackedScene" uid="uid://b4as7vnujh6dk" path="res://Scenes/Objects/Foods/Foods/Garlic.tscn" id="8_p0qrd"]
+[ext_resource type="PackedScene" uid="uid://dptcocoe06hml" path="res://Scenes/Objects/Foods/Foods/Lime.tscn" id="9_2rueq"]
+[ext_resource type="PackedScene" uid="uid://be0rdv3t1ilgf" path="res://Scenes/Objects/Foods/Foods/Shallots.tscn" id="10_jjy58"]
+[ext_resource type="PackedScene" uid="uid://ch2575nrx16gm" path="res://Scenes/Objects/Foods/Foods/Turmeric.tscn" id="11_jjy58"]
+[ext_resource type="PackedScene" uid="uid://be30h0mnd1huh" path="res://Scenes/Objects/Foods/Foods/WhitePepper.tscn" id="12_671uo"]
+
+[node name="RigidBodys" type="Node3D"]
+
+[node name="Chicken" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Chicken" instance=ExtResource("1_r2bhd")]
+
+[node name="Chicken2" type="Node3D" parent="."]
+
+[node name="RigidBody3D2" parent="Chicken2" instance=ExtResource("2_6itl4")]
+
+[node name="Chicken3" type="Node3D" parent="."]
+
+[node name="RigidBody3D3" parent="Chicken3" instance=ExtResource("3_cbmrg")]
+
+[node name="BayLeaf" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="BayLeaf" instance=ExtResource("4_p0qrd")]
+
+[node name="Candlenut" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Candlenut" instance=ExtResource("5_2rueq")]
+
+[node name="Corriander" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Corriander" instance=ExtResource("6_jjy58")]
+
+[node name="Lemongrass" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Lemongrass" instance=ExtResource("7_671uo")]
+
+[node name="Garlic" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Garlic" instance=ExtResource("8_p0qrd")]
+
+[node name="Lime" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Lime" instance=ExtResource("9_2rueq")]
+
+[node name="Shallots" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Shallots" instance=ExtResource("10_jjy58")]
+
+[node name="Turmeric" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="Turmeric" instance=ExtResource("11_jjy58")]
+
+[node name="WhitePepper" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="WhitePepper" instance=ExtResource("12_671uo")]
