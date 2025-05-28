@@ -16,6 +16,9 @@ func get_prompt():
 			break
 			
 	return prompt_message + "  ["+ key_name + "]"
+	
+func get_prompt_message():
+	return prompt_message
 
 func interact(body):
 	interacted.emit(body)

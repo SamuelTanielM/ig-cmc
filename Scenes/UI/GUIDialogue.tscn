@@ -19,8 +19,6 @@ position = Vector2(569, 325.5)
 scale = Vector2(1.01301, 0.868146)
 texture = ExtResource("2_e157n")
 
-[node name="Textbook" parent="." instance=ExtResource("1_2njae")]
-
 [node name="Recipe" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -62,20 +60,25 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "---
-1. **Prepare the ingredients**  
+1. Prepare the ingredients
    Slice garlic, shallots, turmeric, and tear or slice the lime leaves. Cut the chicken into small pieces.
 
-2. **Cooking**  
+2. Cooking
    - Heat oil in a pan or wok.  
-   - Add garlic, shallots, and turmeric. Stir-fry for about 1 minute until fragrant.  
+   - Add garlic, shallots, and turmeric. Stir-fry until fragrant.  
    - Add the chicken pieces. Stir-fry until the color changes.  
-   - Add salt, lime leaves, and a splash of water. Stir, then cover and cook for 5–7 minutes, stirring occasionally.  
+   - Add salt, lime leaves, and a splash of water. Stir occasionally.  
    - Add chicken powder or MSG if desired.
 
-3. **Finishing Touch**  
-   Turn off the heat, squeeze lime juice over the chicken, give it a quick stir, and serve warm.
+3. Finishing Touch
+   Turn off the heat and serve warm. Put all ingredients into the plate in the center.
 
 ---
 
-🥢 Serve with hot rice and enjoy the fresh citrusy aroma and warm turmeric flavor!"
+🥢 enjoy the fresh citrusy aroma and warm turmeric flavor!
+
+# Tips if it's too hard just slice the mentioned ingredients, put on the stove, turn on the fire, then put them on the plate (any ingredients unsliced or uncooked will do)"
 autowrap_mode = 2
+
+[node name="Textbook" parent="." instance=ExtResource("1_2njae")]
+z_index = 1

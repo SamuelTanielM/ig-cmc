@@ -37,7 +37,7 @@ func _ready():
 
 func _process(delta):
 	if on_fire:
-		fire_intensity = min(fire_intensity + delta * (1 / 120.0), 1.0)
+		fire_intensity = min(fire_intensity + delta * (1.0 / 90.0), 1.0)
 
 		var burn_target_color = Color(0.4, 0.2, 0.05, 1.0)
 

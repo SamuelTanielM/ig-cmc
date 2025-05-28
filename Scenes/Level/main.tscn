@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c83id1wgakja2" path="res://Assets/Characters/sun.tscn" id="4_0h1uw"]
 [ext_resource type="PackedScene" uid="uid://d0e5nrek60pw1" path="res://Scenes/UI/Dialogue.tscn" id="5_qnhof"]
 [ext_resource type="PackedScene" uid="uid://c8g5hhj64rbg2" path="res://Scenes/UI/Sky.tscn" id="6_sau07"]
-[ext_resource type="PackedScene" uid="uid://56r8hyb0gqob" path="res://Scenes/Objects/opor_ayam.tscn" id="7_ptjms"]
+[ext_resource type="PackedScene" uid="uid://56r8hyb0gqob" path="res://Scenes/Objects/PlateWorking.tscn" id="7_ptjms"]
 [ext_resource type="PackedScene" uid="uid://cdf2eandrty1a" path="res://Scenes/Objects/Foods/Bottles/Oil.tscn" id="8_qe4dj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6bp64"]

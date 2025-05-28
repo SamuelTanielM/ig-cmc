@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Inventory="*res://Scripts/Inventory.gd"
+IngredientTracker="*res://Scripts/IngredientTracker.gd"
 
 [dialogic]
 

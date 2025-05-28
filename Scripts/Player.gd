@@ -30,7 +30,7 @@ const MOUSE_SENS = 0.005
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var head: Node3D = $Head
 @onready var slicer = $Head/Camera3D/Slicer
-
+@onready var audio_play = $AudioStreamPlayer
 
 
 var meshSlicer = MeshSlicer.new()
@@ -165,6 +165,9 @@ func _physics_process(delta):
 	if slicer_mode_enabled and Input.is_action_just_pressed("left_mouse"):
 		for body in $Head/Camera3D/Slicer/Area3D.get_overlapping_bodies():
 			if body is RigidBody3D and body.get_parent().get_parent().name == "RigidBodys":
+				var ingredient_name = body.get_prompt_message()
+				print(ingredient_name)
+				IngredientTracker.add_ingredient(ingredient_name)
 
 				var meshinstance = body.find_child("MeshInstance3D", true, false)
 				var T = Transform3D.IDENTITY
@@ -273,13 +276,13 @@ func pick_up_object(object) -> bool:
 		print("Can't pick up yet! Still in cooldown.")
 		return false
 	
-	print("Picking up object:", object.name)
+	print("Picking up object:", object.get_prompt_message())
 	object.reparent(self)
 	object.global_position = $Head/Camera3D/CarryObject.global_position
 	
 	await get_tree().create_timer(0.1).timeout
 	pickedObject = object
-	print("Picked up:", pickedObject.name)
+	print("Picked up:", pickedObject.get_prompt_message())
 	return true
 	
 func pick_up_object_sliced(object) -> bool:
@@ -287,14 +290,14 @@ func pick_up_object_sliced(object) -> bool:
 		print("Can't pick up yet! Still in cooldown.")
 		return false
 
-	print("Picking up object:", object.name)
+	print("Picking up object:", object.get_prompt_message())
 	slicedPickedObject_original_parent = object.get_parent()  # ⬅️ Store original parent
 	object.reparent(self)
 	object.global_position = $Head/Camera3D/CarryObject.global_position
 
 	await get_tree().create_timer(0.1).timeout
 	slicedPickedObject = object
-	print("Picked up:", slicedPickedObject.name)
+	print("Picked up:", slicedPickedObject.get_prompt_message())
 	return true
 
 

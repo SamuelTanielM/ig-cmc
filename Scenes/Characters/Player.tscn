@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=4 uid="uid://bhdkvrmmv5gn1"]
+[gd_scene load_steps=15 format=4 uid="uid://bhdkvrmmv5gn1"]
 
 [ext_resource type="PackedScene" uid="uid://d0e5nrek60pw1" path="res://Scenes/UI/Dialogue.tscn" id="2_0el0d"]
 [ext_resource type="Script" uid="uid://4n6tm33vhhjf" path="res://Scripts/UI/ray_cast_3d.gd" id="2_o5en2"]
 [ext_resource type="Texture2D" uid="uid://c4o2xl3xlyr5j" path="res://Assets/Outline/hand.png" id="3_7pt4t"]
 [ext_resource type="Script" uid="uid://yhj2vw3xe4bm" path="res://Scripts/Player.gd" id="4_bhhdu"]
+[ext_resource type="AudioStream" uid="uid://cdsyfxuigsd6e" path="res://Assets/Audio/Aftertune - Travel The World (Original Mix).wav" id="5_7qdam"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_drsii"]
 
@@ -133,26 +134,15 @@ target_position = Vector3(0, 0, -4)
 collision_mask = 15
 script = ExtResource("2_o5en2")
 
-[node name="Control" type="Control" parent="Head/Camera3D/RayCast3D"]
-layout_mode = 3
+[node name="Prompt" type="Label" parent="Head/Camera3D/RayCast3D"]
+z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="Prompt" type="Label" parent="Head/Camera3D/RayCast3D/Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_left = 32.0
-offset_top = 25.0
+offset_top = 20.0417
 offset_right = -32.0
-offset_bottom = -575.0
+offset_bottom = -570.042
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 1
@@ -161,9 +151,9 @@ text = "Prompt [Key]
 "
 horizontal_alignment = 2
 
-[node name="Crosshair" type="TextureRect" parent="Head/Camera3D/RayCast3D/Control"]
+[node name="Crosshair" type="TextureRect" parent="Head/Camera3D/RayCast3D"]
+z_index = -1
 custom_minimum_size = Vector2(30, 30)
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -181,10 +171,16 @@ texture = ExtResource("3_7pt4t")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Head/Camera3D/RayCast3D/Control"]
-layout_mode = 0
-offset_right = 219.0
-offset_bottom = 173.667
+[node name="Label" type="Label" parent="Head/Camera3D/RayCast3D"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 19.0
+offset_right = -933.0
+offset_bottom = -455.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 11
 text = "Use WASD to move.
@@ -200,5 +196,10 @@ metadata/_edit_use_anchors_ = true
 mesh = SubResource("CapsuleMesh_rpqav")
 
 [node name="Dialogue" parent="." instance=ExtResource("2_0el0d")]
-transform = Transform3D(0.968413, 0, -0.249349, 0, 1, 0, 0.249349, 0, 0.968413, 0.246312, 0.28694, -1.3129)
+transform = Transform3D(0.968413, 0, -0.249349, 0, 1, 0, 0.249349, 0, 0.968413, 0.246312, 0.28694, -1.16749)
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7qdam")
+volume_db = -16.64
+autoplay = true

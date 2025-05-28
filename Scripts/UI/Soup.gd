@@ -28,9 +28,23 @@ var player
 func _ready():
 	tween = create_tween()
 	await get_tree().process_frame  # Wait one frame
+
+	# Make the mesh unique to this instance
+	if soup_node.mesh:
+		soup_node.mesh = soup_node.mesh.duplicate()
+
+	# Make the collision shape unique
+	if collision_soup_node.shape:
+		collision_soup_node.shape = collision_soup_node.shape.duplicate()
+
+	# Reassign after duplication
+	cylinder_mesh = soup_node.mesh as CylinderMesh
+	col_cylinder_mesh = collision_soup_node.shape as CylinderShape3D
+
 	player = get_tree().get_first_node_in_group("Player")
 	if item == null:
-		item = $"."  # fallback to self if item not assigned
+		item = $"."  # fallback to self
+
 
 func interact(body):
 	if not selected and body.has_method("pick_up_object"):

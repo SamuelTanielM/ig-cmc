@@ -14,7 +14,7 @@ As he cooks, memories return.
 
 He remembers his mother. He remembers the kitchen, the warmth of porridge on the stove. He remembers the words they used to say together, whispering it like a promise through hunger and hardship: **"Chef Must Cook."**
 
-He remembers the man — not his father — the one who used them. Who shouted. Who hit. The day came when the shouting turned into something worse. His mother, still trying to cook, was struck down before his eyes. 
+He remembers the man — not his father — the one who used them. Who shouted. Who hit. The day came when the shouting turned into something worse. His mother, still trying to cook, was struck down before his eyes.
 
 In panic and rage, he remembered the porridge recipe from TV. He hurled the boiling pot from the stove at the man. And then he ran — his cat in his arms — out into the cold night, injured, shaking, alone.
 
@@ -34,14 +34,14 @@ Because no matter what — **Chef Must Cook.**
 
 ## 🎮 Controls
 
-- **WASD** – Move  
-- **Double W** – Run  
-- **Shift** – Crouch  
-- **Space** – Jump  
-- **1** – Equip Knife 🔪  
-- **2** – View Recipe 📖  
-- **F** – Interact 👐  
-- **Scroll Up/Down** – Rotate held items 🔄  
+- **WASD** – Move
+- **Double W** – Run
+- **Shift** – Crouch
+- **Space** – Jump
+- **1** – Equip Knife 🔪
+- **2** – View Recipe 📖
+- **F** – Interact 👐
+- **Scroll Up/Down** – Rotate held items 🔄
 
 ---
 
@@ -59,4 +59,8 @@ But if you feel like it, step into the kitchen. Try to make something beautiful 
 
 More chapters, foods, polish, multiplayer, and a real ending are planned. Someday.
 
-For now, just remember: **Chef Must Cook.** 🔥
+## For now, just remember: **Chef Must Cook.** 🔥
+
+## ✅ UAS
+
+Added Balancing: buat win condition yang lebih mudah atau untuk setiap step ada checkpoint sehingga player mendapatkan feedback positif dari melakukan step yang sesuai resep. Now it has audio and win condition and checkpoint that gives positive feedbacks! There are a lot to add TT and even though it didn't pass my expectations, i have to know my scope and limits, so i sacrifice some of the UI aspects aesthetics to make sure the logics are superb! I wish i could work more on this, but i think i have enough of Godot 3D Physics because i've tried to fix this game countless times! So i'm moving on to improve this game on roblox, wish me luck! Thank you so much for the learning opportunities and now i'm a fullstack game developer YAHAAA!!!!!!

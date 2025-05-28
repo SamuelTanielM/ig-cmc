@@ -68,6 +68,9 @@ func _on_area_3d_body_entered(body):
 			bodies_in_area.append(body)
 		if on_fire_stove:
 			body.on_fire = true
+			var ingredient_name = body.get_prompt_message()
+			print(ingredient_name)
+			IngredientTracker.add_cooked_ingredient(ingredient_name)
 
 
 func _on_area_3d_body_exited(body):
@@ -83,4 +86,7 @@ func update_fire_state():
 		if not is_instance_valid(body):
 			continue
 		if "on_fire" in body:
+			var ingredient_name = body.get_prompt_message()
+			print(ingredient_name)
+			IngredientTracker.add_cooked_ingredient(ingredient_name)
 			body.on_fire = on_fire_stove

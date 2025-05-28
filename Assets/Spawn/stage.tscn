@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://cyg0pwho00xf0"]
+[gd_scene load_steps=32 format=4 uid="uid://cyg0pwho00xf0"]
 
 [ext_resource type="Material" uid="uid://cx8fecqbdxn8t" path="res://Assets/AddonsAssets/main.tres" id="2_1ldih"]
 [ext_resource type="PackedScene" uid="uid://u582y6ets6ti" path="res://Scenes/Objects/Kitchen Tools/Stove.tscn" id="2_efh3p"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cb0sh381kevsm" path="res://Scenes/Objects/Foods/Foods/Chicken.tscn" id="11_efxnt"]
 [ext_resource type="PackedScene" uid="uid://cplaunl2x1uf7" path="res://Scenes/Objects/Foods/Foods/Chicken2.tscn" id="12_mrcox"]
 [ext_resource type="PackedScene" uid="uid://chqge83appi4i" path="res://Scenes/Objects/Foods/Foods/Chicken1.tscn" id="13_1dper"]
-[ext_resource type="PackedScene" uid="uid://bk5aor87cmj8n" path="res://Scenes/Objects/Foods/Foods/BayLeaf.tscn" id="14_0pk4p"]
+[ext_resource type="PackedScene" uid="uid://bk5aor87cmj8n" path="res://Scenes/Objects/Foods/Foods/LimeLeaf.tscn" id="14_0pk4p"]
 [ext_resource type="PackedScene" uid="uid://dca1v8gwcdwgf" path="res://Scenes/Objects/Foods/Foods/Candlenut.tscn" id="15_r6y44"]
 [ext_resource type="PackedScene" uid="uid://bb7fckd0rsihh" path="res://Scenes/Objects/Foods/Foods/Corriander.tscn" id="16_ujuvb"]
 [ext_resource type="PackedScene" uid="uid://cvuaovooj4trr" path="res://Scenes/Objects/Foods/Foods/Lemongrass.tscn" id="17_rqm5u"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://be0rdv3t1ilgf" path="res://Scenes/Objects/Foods/Foods/Shallots.tscn" id="20_p8eoc"]
 [ext_resource type="PackedScene" uid="uid://ch2575nrx16gm" path="res://Scenes/Objects/Foods/Foods/Turmeric.tscn" id="21_hdvgk"]
 [ext_resource type="PackedScene" uid="uid://be30h0mnd1huh" path="res://Scenes/Objects/Foods/Foods/WhitePepper.tscn" id="22_hqs2d"]
+[ext_resource type="PackedScene" uid="uid://56r8hyb0gqob" path="res://Scenes/Objects/PlateWorking.tscn" id="23_mrcox"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hxiil"]
 
@@ -478,3 +479,6 @@ transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, 
 transform = Transform3D(0.524759, 0, -0.851251, 0, 1, 0, 0.851251, 0, 0.524759, -4.56382, 0.0429496, 10.4433)
 
 [node name="RigidBody3D" parent="RigidBodys/WhitePepper2" instance=ExtResource("22_hqs2d")]
+
+[node name="PlateWorking" parent="." instance=ExtResource("23_mrcox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6903, -1.49244, 0)

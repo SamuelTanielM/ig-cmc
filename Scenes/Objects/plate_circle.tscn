@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cb0sh381kevsm" path="res://Scenes/Objects/Foods/Foods/Chicken.tscn" id="2_mr5sd"]
 [ext_resource type="PackedScene" uid="uid://cplaunl2x1uf7" path="res://Scenes/Objects/Foods/Foods/Chicken2.tscn" id="3_pit64"]
 [ext_resource type="PackedScene" uid="uid://chqge83appi4i" path="res://Scenes/Objects/Foods/Foods/Chicken1.tscn" id="4_nl6cu"]
-[ext_resource type="PackedScene" uid="uid://bk5aor87cmj8n" path="res://Scenes/Objects/Foods/Foods/BayLeaf.tscn" id="5_rusg4"]
+[ext_resource type="PackedScene" uid="uid://bk5aor87cmj8n" path="res://Scenes/Objects/Foods/Foods/LimeLeaf.tscn" id="5_rusg4"]
 [ext_resource type="PackedScene" uid="uid://dca1v8gwcdwgf" path="res://Scenes/Objects/Foods/Foods/Candlenut.tscn" id="6_x1bna"]
 [ext_resource type="PackedScene" uid="uid://bb7fckd0rsihh" path="res://Scenes/Objects/Foods/Foods/Corriander.tscn" id="7_uj641"]
 [ext_resource type="PackedScene" uid="uid://cvuaovooj4trr" path="res://Scenes/Objects/Foods/Foods/Lemongrass.tscn" id="8_dp26v"]

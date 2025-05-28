@@ -1,7 +1,7 @@
 extends RayCast3D
 
 var current_collider: Node = null
-@onready var prompt = $Control/Prompt
+@onready var prompt = $Prompt
 @onready var outline_material = preload("res://Assets/Outline/outline_material.tres")
 
 var original_override_materials := {}
